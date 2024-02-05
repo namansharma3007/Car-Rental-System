@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS cars (
     vehicle_number VARCHAR(20) NOT NULL,
     seating_capacity INT NOT NULL,
     rent_per_day DECIMAL(10, 2) NOT NULL,
+    booking_status TINYINT(1) NOT NULL DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (agency_id) REFERENCES car_rental_agencies(agency_id) ON DELETE CASCADE
 );
