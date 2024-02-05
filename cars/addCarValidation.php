@@ -15,10 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('This car already exists.'); window.location.href='./add_car.php';</script>";
         exit;
     }
-
+    // Get car max id;
+    $carMaxIdResult = $conn->query("SELECT MAX(car_id) FROM `cars`");
+    $carMaxIdRow = $carMaxIdResult->fetch_assoc();
+    $carMaxId = $carMaxIdRow['MAX(car_id)'] + 1;
     // Insert car details into the database
     $insertQuery = "INSERT INTO cars (car_id, agency_id, vehicle_model, vehicle_number, seating_capacity, rent_per_day, booking_status, created_at) 
-                    VALUES (NULL, '1', '$vehicleModel', '$vehicleNumber', '$seatingCapacity', '$rentPerDay', '0', current_timestamp())";
+                    VALUES ('$carMaxId', '1', '$vehicleModel', '$vehicleNumber', '$seatingCapacity', '$rentPerDay', '0', current_timestamp())";
     
     if ($conn->query($insertQuery)) {
         echo "<script>alert('Car added successfully.'); window.location.href='./add_car.php';</script>";

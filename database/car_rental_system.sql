@@ -1,3 +1,5 @@
+-- Creating Database
+CREATE DATABASE IF NOT EXISTS car_rental_system;
 
 -- Customers table
 CREATE TABLE IF NOT EXISTS customers (

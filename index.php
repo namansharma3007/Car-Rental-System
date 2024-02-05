@@ -1,6 +1,3 @@
-<?php
-    include('./database/setting_db.php');
-?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -19,9 +19,9 @@
             <hr class="my-4">
 
             <div class="d-flex gap-1 flex-wrap">
-                <a class="btn btn-success btn-lg" href="/car_rental/cars/add_car.php" role="button">Add Cars</a>
+                <a class="btn btn-primary btn-lg" href="/car_rental/cars/add_car.php" role="button">Add Cars</a>
                 <a class="btn btn-primary btn-lg" href="/car_rental/cars/view_booked_car.php" role="button">View booked card</a>
-                <a class="btn btn-info btn-lg" href="/car_rental/cars/available_cars.php" role="button">View Available Car</a>
+                <a class="btn btn-primary btn-lg" href="/car_rental/cars/available_cars.php" role="button">View Available Car</a>
             </div>
         </div>
     </div>
